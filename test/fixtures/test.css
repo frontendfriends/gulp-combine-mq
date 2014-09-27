@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+body {
+	font-family: "Georgia Pro",Georgia,Times,serif;
+	font-weight: 400;
+	color: #000;
+	min-height: 100%;
+	width: 100%;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 20px;
+	line-height: 1.25rem;
+}
+@media (min-width: 71.25em) {
+	a:hover,
+	a:focus {
+		text-decoration: none;
+	}
+
+	img {
+		-ms-interpolation-mode: bicubic;
+	}
+}
+
+#monitor-width {
+	display: block;
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+	width: 20em;
+}
+
+.no-transition,
+.no-transition * {
+	-webkit-transition: none!important;
+	-moz-transition: none!important;
+	-ms-transition: none!important;
+	-o-transition: none!important;
+	transition: none!important;
+}
+
+#page {
+	max-width: 1140px;
+	margin: 0 20px;
+}
+
+@media only screen {
+
+	/*   hihihih */
+
+	html {
+		color: red; /* hsdfjsdjhf */
+		line-height: 200;
+	}
+
+}
+
+
+@media (min-width: 71.25em) {
+
+	.container {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+
+	#monitor-width {
+		width: 1140px;
+	}
+
+	#page {
+		margin: 0 auto;
+	}
+
+}
+
+
+@media (min-width: 30em) {
+
+	#monitor-width {
+		width: 480px;
+	}
+
+}
+
+@media (min-width: 37.5em) {
+
+	#monitor-width {
+		width: 600px;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.container {
+		margin: 0 25px;
+		margin: 0 1.5625rem;
+	}
+
+	#monitor-width {
+		width: 768px;
+	}
+
+}
+
+@media (min-width: 60.625em) {
+
+	#monitor-width {
+		width: 970px;
+	}
+
+}
+
+@media print {
+
+	html {
+		color: red;
+		line-height: 200;
+	}
+
+}
