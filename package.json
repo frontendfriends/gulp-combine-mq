@@ -11,11 +11,10 @@
       "web": "https://github.com/furzeface"
     }
   ],
-  "contributors": [
-  ],
+  "contributors": [],
   "repository": {
-  	"type": "git",
-  	"url": "https://github.com/buildingblocks/gulp-combine-mq.git"
+    "type": "git",
+    "url": "https://github.com/buildingblocks/gulp-combine-mq.git"
   },
   "bugs": {
     "url": "https://github.com/buildingblocks/gulp-combine-mq/issues"
@@ -36,8 +35,11 @@
   },
   "dependencies": {
     "combine-mq": "^0.2.0",
+    "graceful-fs": "^3.0.2",
     "gulp-util": "~2.2.0",
-    "through2": "*"
+    "map-stream": "^0.1.0",
+    "path": "^0.4.9",
+    "temp-write": "^1.0.0"
   },
   "devDependencies": {
     "coveralls": "*",
