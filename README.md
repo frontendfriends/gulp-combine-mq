@@ -23,6 +23,8 @@ gulp.src('./src/**/*.css')
 * * *
 
 ## Contributing
+[![Build Status][travis-image]][travis-url]
+
 To contribute check the [GitHub issues](https://github.com/buildingblocks/gulp-combine-mq/issues) then work away!
 
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
@@ -41,5 +43,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 [MIT License](http://building-blocks.mit-license.org)
 
 
-[npm-url]: https://npmjs.org/package/gulp-combine-mq
 [npm-image]: https://badge.fury.io/js/gulp-combine-mq.svg
+[npm-url]: https://npmjs.org/package/gulp-combine-mq
+[travis-image]: https://travis-ci.org/frontendfriends/gulp-combine-mq.svg
+[travis-url]: https://travis-ci.org/frontendfriends/gulp-combine-mq
