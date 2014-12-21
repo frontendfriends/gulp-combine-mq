@@ -1,6 +1,6 @@
 {
 	"name": "gulp-combine-mq",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"description": "Gulp plugin for node-combine-mq",
 	"homepage": "https://github.com/buildingblocks/gulp-combine-mq",
 	"author": "Building Blocks Ltd <info@building-blocks.com>",
