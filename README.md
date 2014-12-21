@@ -36,6 +36,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * * *
 
 ## Release History
+- 2014-09-29 v0.1.1 - Update to [node-combine-mq](https://github.com/frontendfriends/node-combine-mq) v0.4.0 to fix font-face issues.
 - 2014-09-29 v0.1.1 - Adds dependencies.
 - 2014-09-29 v0.1.0 - Initial release.
 
