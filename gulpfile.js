@@ -3,7 +3,7 @@
  gutil = require('gulp-util');
 
  // Require tasks
- var combineMq = require('gulp-combine-mq');
+ var combineMq = require('./index');
 
  // This plugin's task
  gulp.task('combineMq', function () {

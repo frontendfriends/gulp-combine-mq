@@ -1,62 +1,63 @@
 {
-  "name": "gulp-combine-mq",
-  "version": "0.1.1",
-  "description": "Gulp plugin for node-combine-mq",
-  "homepage": "https://github.com/buildingblocks/gulp-combine-mq",
-  "author": "Building Blocks Ltd <info@building-blocks.com>",
-  "maintainers": [
-    {
-      "name": "Daniel Furze",
-      "email": "daniel@furzeface.com",
-      "web": "https://github.com/furzeface"
-    }
-  ],
-  "contributors": [],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/buildingblocks/gulp-combine-mq.git"
-  },
-  "bugs": {
-    "url": "https://github.com/buildingblocks/gulp-combine-mq/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://building-blocks.mit-license.org"
-    }
-  ],
-  "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.2.10"
-  },
-  "scripts": {
-    "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
-  },
-  "dependencies": {
-    "combine-mq": "^0.2.0",
-    "graceful-fs": "^3.0.2",
-    "gulp-util": "~2.2.0",
-    "map-stream": "^0.1.0",
-    "path": "^0.4.9",
-    "temp-write": "^1.0.0"
-  },
-  "devDependencies": {
-    "coveralls": "*",
-    "event-stream": "*",
-    "gulp": "^3.8.8",
-    "istanbul": "*",
-    "mocha": "*",
-    "mocha-lcov-reporter": "*",
-    "should": "~2.1.0"
-  },
-  "keywords": [
-    "gulpplugin",
-    "combine",
-    "media queries",
-    "combine media queries",
-    "CSS",
-    "Less",
-    "Sass"
-  ]
+	"name": "gulp-combine-mq",
+	"version": "0.2.0",
+	"description": "Gulp plugin for node-combine-mq",
+	"homepage": "https://github.com/buildingblocks/gulp-combine-mq",
+	"author": "Building Blocks Ltd <info@building-blocks.com>",
+	"maintainers": [
+		{
+			"name": "Daniel Furze",
+			"email": "daniel@furzeface.com",
+			"web": "https://github.com/furzeface"
+		}
+	],
+	"contributors": [],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/buildingblocks/gulp-combine-mq.git"
+	},
+	"bugs": {
+		"url": "https://github.com/buildingblocks/gulp-combine-mq/issues"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://building-blocks.mit-license.org"
+		}
+	],
+	"engines": {
+		"node": ">=0.8.0",
+		"npm": ">=1.2.10"
+	},
+	"scripts": {
+		"test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
+		"coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+	},
+	"dependencies": {
+		"combine-mq": "^0.4.0",
+		"graceful-fs": "^3.0.4",
+		"gulp-util": "~2.2.0",
+		"map-stream": "^0.1.0",
+		"path": "^0.4.9",
+		"temp-write": "^1.1.0",
+		"through2": "*"
+	},
+	"devDependencies": {
+		"coveralls": "*",
+		"event-stream": "*",
+		"gulp": "^3.8.8",
+		"istanbul": "*",
+		"mocha": "*",
+		"mocha-lcov-reporter": "*",
+		"should": "~2.1.0"
+	},
+	"keywords": [
+		"gulpplugin",
+		"combine",
+		"media queries",
+		"combine media queries",
+		"CSS",
+		"Less",
+		"Sass"
+	]
 }
