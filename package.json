@@ -1,6 +1,6 @@
 {
 	"name": "gulp-combine-mq",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Gulp plugin for node-combine-mq",
 	"homepage": "https://github.com/buildingblocks/gulp-combine-mq",
 	"author": "Building Blocks Ltd <info@building-blocks.com>",
@@ -34,7 +34,7 @@
 		"coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
 	},
 	"dependencies": {
-		"combine-mq": "^0.4.0",
+		"combine-mq": "^0.7.0",
 		"graceful-fs": "^3.0.4",
 		"gulp-util": "~2.2.0",
 		"map-stream": "^0.1.0",
