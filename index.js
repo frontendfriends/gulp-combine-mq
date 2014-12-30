@@ -35,7 +35,9 @@ module.exports = function (options) {
 						return cb(new gutil.PluginError('gulp-combine-mq', err));
 					}
 
-					var processed = combineMq.parseCssString(data, {});
+					var processed = combineMq.parseCssString(data, {
+						beautify: true
+					});
 
 					if (options.showLog) {
 						gutil.log('gulp-combine-mq:', gutil.colors.green('✔ ') + file.relative);
