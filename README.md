@@ -15,9 +15,13 @@ Then, add it to your `gulpfile.js`:
 ```js
 var combineMq = require('gulp-combine-mq');
 
-gulp.src('./src/**/*.css')
-	.pipe(combineMq())
-	.pipe(gulp.dest('./dist'));
+gulp.task('combineMq', function () {
+	return gulp.src('test.css')
+	.pipe(combineMq({
+		beautify: false
+	}))
+	.pipe(gulp.dest('tmp'));
+});
 ```
 
 * * *

@@ -28,7 +28,9 @@ module.exports = function (options) {
 					return cb(new gutil.PluginError('gulp-combine-mq', err));
 				}
 
-				options = options || {};
+				options = options || {
+					beautify: true
+				};
 
 				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
 					if (err) {
@@ -36,7 +38,7 @@ module.exports = function (options) {
 					}
 
 					var processed = combineMq.parseCssString(data, {
-						beautify: true
+						beautify: options.beautify
 					});
 
 					if (options.showLog) {
