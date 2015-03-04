@@ -40,6 +40,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 * * *
 
 ## Release History
+* 04-03-15 - v0.4.0 - Make beautify optional from Node task.
 * 30-12-14 - v0.3.1 - Default beautify to `true` in gulp task configuration.
 * 21-12-14 - v0.3.0 - Update to [node-combine-mq](https://github.com/frontendfriends/node-combine-mq) v0.7.0 to fix output beautification issues.
 * 20-12-14 - v0.2.0 - Update to [node-combine-mq](https://github.com/frontendfriends/node-combine-mq) v0.4.0 to fix font-face issues.
