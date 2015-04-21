@@ -40,8 +40,7 @@
 		"map-stream": "^0.1.0",
 		"path": "^0.4.9",
 		"temp-write": "^1.1.0",
-		"through2": "*",
-		"vinyl-sourcemaps-apply": "~0.1.0"
+		"through2": "*"
 	},
 	"devDependencies": {
 		"coveralls": "*",
