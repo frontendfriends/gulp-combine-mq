@@ -1,56 +1,43 @@
 'use strict';
 
 var path = require('path'),
-fs = require('graceful-fs'),
-gutil = require('gulp-util'),
-map = require('map-stream'),
-tempWrite = require('temp-write'),
-combineMq = require('combine-mq');
+	gutil = require('gulp-util'),
+	through = require('through2'),
+	combineMq = require('combine-mq');
 
 
-module.exports = function (options) {
-	return map(function (file, cb) {
-		if (file.isNull()) {
-			return cb(null, file);
+var PLUGIN_NAME = 'gulp-combine-mq';
+
+module.exports = function(options) {
+
+	options = options || {
+		beautify: true
+	};
+
+	return through.obj(function(file, enc, cb) {
+		if(file.isNull()) {
+			return cb();
 		}
 
-		if (file.isStream()) {
-			return cb(new gutil.PluginError('gulp-combine-mq', 'Streaming not supported'));
+		if(file.isStream()) {
+			this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));
+			return cb();
 		}
 
-		tempWrite(file.contents, path.extname(file.path), function (err, tempFile) {
-			if (err) {
-				return cb(new gutil.PluginError('gulp-combine-mq', err));
+		if(file.isBuffer()) {
+			var processed = combineMq.parseCssString(file.contents.toString(), {
+				beautify: options.beautify
+			});
+
+			if(options.showLog) {
+				gutil.log(PLUGIN_NAME, gutil.colors.green('✔ ') + file.relative);
 			}
 
-			fs.stat(tempFile, function (err, stats) {
-				if (err) {
-					return cb(new gutil.PluginError('gulp-combine-mq', err));
-				}
+			file.contents = new Buffer(processed);
 
-				options = options || {
-					beautify: true
-				};
+			this.push(file);
 
-				fs.readFile(tempFile, { encoding : 'UTF-8'}, function(err, data) {
-					if (err) {
-						return cb(new gutil.PluginError('gulp-combine-mq', err));
-					}
-
-					var processed = combineMq.parseCssString(data, {
-						beautify: options.beautify
-					});
-
-					if (options.showLog) {
-						gutil.log('gulp-combine-mq:', gutil.colors.green('✔ ') + file.relative);
-					}
-
-					file.contents = new Buffer(processed);
-
-					cb(null, file);
-				});
-
-			});
-		});
+			return cb();
+		}
 	});
 };
