@@ -18,8 +18,7 @@ var combineMq = require('gulp-combine-mq');
 gulp.task('combineMq', function () {
 	return gulp.src('test.css')
 	.pipe(combineMq({
-		beautify: false,
-		sourcemaps: true
+		beautify: false
 	}))
 	.pipe(gulp.dest('tmp'));
 });

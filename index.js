@@ -5,8 +5,7 @@ fs = require('graceful-fs'),
 gutil = require('gulp-util'),
 map = require('map-stream'),
 tempWrite = require('temp-write'),
-combineMq = require('combine-mq'),
-applySourceMap = require('vinyl-sourcemaps-apply');
+combineMq = require('combine-mq');
 
 
 module.exports = function (options) {
@@ -47,10 +46,6 @@ module.exports = function (options) {
 					}
 
 					file.contents = new Buffer(processed);
-
-					if(options.sourcemaps) {
-						applySourceMap(file, processed.map);
-					}
 
 					cb(null, file);
 				});
