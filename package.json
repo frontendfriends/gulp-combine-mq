@@ -35,12 +35,9 @@
 	},
 	"dependencies": {
 		"combine-mq": "^0.7.0",
-		"graceful-fs": "^3.0.4",
 		"gulp-util": "~2.2.0",
-		"map-stream": "^0.1.0",
 		"path": "^0.4.9",
-		"temp-write": "^1.1.0",
-		"through2": "*"
+		"through2": "~0.6.0"
 	},
 	"devDependencies": {
 		"coveralls": "*",
