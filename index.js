@@ -1,9 +1,11 @@
 'use strict';
 
 var path = require('path'),
-	gutil = require('gulp-util'),
 	through = require('through2'),
-	combineMq = require('combine-mq');
+	combineMq = require('combine-mq'),
+	log = require('fancy-log'),
+	colors = require('ansi-colors'),
+	PluginError = require('plugin-error');
 
 
 var PLUGIN_NAME = 'gulp-combine-mq';
@@ -20,7 +22,7 @@ module.exports = function(options) {
 		}
 
 		if(file.isStream()) {
-			this.emit('error', new gutil.PluginError(PLUGIN_NAME, 'Streaming not supported'));
+			this.emit('error', new PluginError(PLUGIN_NAME, 'Streaming not supported'));
 			return cb();
 		}
 
@@ -30,7 +32,7 @@ module.exports = function(options) {
 			});
 
 			if(options.showLog) {
-				gutil.log(PLUGIN_NAME, gutil.colors.green('✔ ') + file.relative);
+				log(PLUGIN_NAME, colors.green('✔ ') + file.relative);
 			}
 
 			file.contents = new Buffer(processed);

@@ -1,6 +1,5 @@
  // Require Gulp
- var gulp = require('gulp'),
- gutil = require('gulp-util');
+ var gulp = require('gulp');
 
  // Require tasks
  var combineMq = require('./index');
@@ -13,6 +12,4 @@
  });
 
 // Default task does all of the things
-gulp.task('default', [
-	'combineMq'
-]);
+gulp.task('default', gulp.series('combineMq'));
